@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ResultsView: View {
-//    var userPick: String
     @Binding var userPick: String?
     @Binding var computerPick: String?
     @Binding var winner: WhoWins?
