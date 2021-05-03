@@ -37,7 +37,7 @@ struct ActionView: View {
             return WhoWins.Tie
         }
         
-        // how not to use rawValue
+        // how not to use rawValue?
         if (button.rawValue == GameOptions.rock.rawValue && computerChoice == GameOptions.scissors.rawValue) || (button.rawValue == GameOptions.paper.rawValue && computerChoice == GameOptions.rock.rawValue) || (button.rawValue == GameOptions.scissors.rawValue && computerChoice == GameOptions.paper.rawValue){
             currentState.scores.playerScore += 1
             return WhoWins.Player
