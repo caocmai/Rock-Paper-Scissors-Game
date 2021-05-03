@@ -26,11 +26,7 @@ struct CheckMarkView: View {
                     .font(.system(size: 60.0))
                     .foregroundColor(color)
                 Text(text)
-                
-                    
             }
-            
         }
-        
     }
 }

@@ -30,15 +30,19 @@ struct ActionView: View {
         let choices: [GameOptions] = [.rock, .paper, .scissors]
         let computerIndex = Int.random(in: 0...2)
         let computerChoice = choices[computerIndex].rawValue
+        let userChoice = button.rawValue
         
         currentState.computerChoice = computerChoice
         
-        if button.rawValue == computerChoice {
+        if userChoice == computerChoice {
             return WhoWins.Tie
         }
         
         // how not to use rawValue?
-        if (button.rawValue == GameOptions.rock.rawValue && computerChoice == GameOptions.scissors.rawValue) || (button.rawValue == GameOptions.paper.rawValue && computerChoice == GameOptions.rock.rawValue) || (button.rawValue == GameOptions.scissors.rawValue && computerChoice == GameOptions.paper.rawValue){
+        if (userChoice == GameOptions.rock.rawValue && computerChoice == GameOptions.scissors.rawValue)
+            || (userChoice == GameOptions.paper.rawValue && computerChoice == GameOptions.rock.rawValue)
+            || (userChoice == GameOptions.scissors.rawValue && computerChoice == GameOptions.paper.rawValue)
+        {
             currentState.scores.playerScore += 1
             return WhoWins.Player
         }

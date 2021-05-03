@@ -14,7 +14,7 @@ struct GameOptionState {
     var winner: WhoWins!
     var userChoice: String?
     var computerChoice: String?
-    var scores: Scores = Scores(playerScore: 0, computerScore: 0)
+    var scores: Scores = Scores(playerScore: 0, computerScore: 0) // Initializes scores as 0s
 }
 
 enum GameOptions: String {
