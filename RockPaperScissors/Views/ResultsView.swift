@@ -29,12 +29,11 @@ struct ResultsView: View {
                     .font(.title)
                 Text("Computer: \(scores.computerScore) ")
                     .font(.title)
-                    .scaleEffect(1)
-                    .animation(Animation.interpolatingSpring(stiffness: 50, damping: 1)
-                                .delay(2).repeatForever()
-                    )
+//                    .scaleEffect(1)
+//                    .animation(Animation.interpolatingSpring(stiffness: 50, damping: 1)
+//                                .delay(2).repeatForever()
+//                    )
             }
-            Text("Your Choice")
             ZStack {
                 Image(userPick!+"-highlighted")
                 if winner?.rawValue == WhoWins.Player.rawValue {

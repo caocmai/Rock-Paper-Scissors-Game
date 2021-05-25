@@ -13,16 +13,15 @@ struct HomeView: View {
     @State private var state = GameOptionState()
     
     var body: some View {
-        VStack(spacing: 40) {
             ForEach(buttons, id: \.self) { button in
                 ActionView(button: button, currentState: $state)
+                    .padding()
                 
             }
             .sheet(isPresented: $state.showView) {
                 ResultsView(userPick: $state.userChoice, computerPick: $state.computerChoice, winner: $state.winner, scores: $state.scores)
             }
         }
-    }
     
 }
 
